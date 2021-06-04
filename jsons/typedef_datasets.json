@@ -1,0 +1,84 @@
+{
+  "classificationDefs": [
+    {
+      "category": "CLASSIFICATION",
+      "name": "raw_dataset",
+      "description": "Used for raw data",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": []
+    },
+    {
+      "category": "CLASSIFICATION",
+      "name": "clean_dataset",
+      "description": "Used for clean data",
+      "typeVersion": "1.0",
+      "attributeDefs": [],
+      "superTypes": []
+    }
+  ],
+  "structDefs": [
+    {
+      "category": "STRUCT",
+      "name": "schema_col",
+      "description": "column definition for schema",
+      "typeVersion": "1.0",
+      "attributeDefs": [
+        {
+          "name": "col",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        },
+        {
+          "name": "data_type",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        }
+      ]
+    }
+  ],
+  "entityDefs": [
+    {
+      "superTypes": [
+        "DataSet"
+      ],
+      "serviceType": "GoodYearDataSet",
+      "category": "ENTITY",
+      "name": "data_object",
+      "description": "a type definition for a file which contains data, this could a file that needs to be processed or it can be an output (ex: extracts)",
+      "typeVersion": "1.0",
+      "attributeDefs": [
+        {
+          "name": "path",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": true
+        },
+        {
+          "name": "col_schema",
+          "typeName": "array<schema_col>",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false
+        }
+      ]
+    }
+  ]
+}

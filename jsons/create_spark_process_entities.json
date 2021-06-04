@@ -1,0 +1,15 @@
+{"entities": [
+    {
+        "typeName": "spark_process",
+        "createdBy": "John Doe",
+        "attributes": {
+            "qualifiedName": "spark_process",
+            "name": "spark process 1",
+            "description": "ingests raw to clean",
+            "owner": "sh4dowauthor",
+            "inputs": [{"guid": "ea05d4e2-16c7-4d2f-a68e-409967abbcde", "typeName": "hive_table"}],
+            "outputs": [{"guid": "c90fca1e-90d3-45fb-b6c7-c0423b88c059", "typeName": "db_table"}]
+        }
+    }
+]
+}
